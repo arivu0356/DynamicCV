@@ -166,5 +166,11 @@ Route::group(['middleware' => 'checkuser'],function(){
             
             //resolution
             Route::post('resolution','ThemeSettingController@resolution');
+            
+            //corping image
+            Route::post('crop-image', 'PersonalController@imageCrop');
+
+
+
     });
 });

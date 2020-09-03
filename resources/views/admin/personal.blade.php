@@ -1,36 +1,36 @@
 @extends('admin.layout.master')
-
+ 
 @section('content')
-
+ 
 @if(session()->has('message'))
                    <div class="alert alert-success">
                       {{ session()->get('message') }}
                    </div>
 @endif
-
+ 
 @if (count($errors) > 0)
-
+ 
             <div class="alert alert-danger">
-
+ 
                 <strong>Whoops!</strong> There were some problems with your input.
-
+ 
                 <ul>
-
+ 
                     @foreach ($errors->all() as $error)
-
+ 
                         <li>{{ $error }}</li>
-
+ 
                     @endforeach
-
+ 
                 </ul>
-
+ 
             </div>
-
+ 
         @endif
-
-
-
-
+ 
+ 
+ 
+ 
 <div class="card">
     <div class="card-header text-center">
     <h5 class="sub-title">General information</h5>
@@ -38,7 +38,7 @@
     <div class="card-block">
       <form action="{{ url('') }}/admin/personal" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
-        
+ 
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-9">
@@ -104,8 +104,8 @@
               </div>
           </div>
         </div>
-
-       
+ 
+ 
         <h5 class="sub-title mt-5">Profile Picture</h5>
         <div class="row mt-4">
           @foreach($personalimage as $perimg)
@@ -118,11 +118,11 @@
             </div> 
           </div>
           @endforeach
-
-         
-          
+ 
+ 
+ 
       </div>
-        <div class="form-group row">
+        {{-- <div class="form-group row">
             <label class="col-sm-2 col-form-label">Upload Image</label>
             <div class="col-sm-3">
                 <input name="img"  class="form-control" type="file">
@@ -130,8 +130,11 @@
             <div class="col-sm-5">
                 <p>upload your image in this format<code>jpg,png,jpeg</code></p>
             </div>
-            
-        </div>
+ 
+        </div> --}}
+        <button type="button" class="btn btn-primary btn-default waves-effect" data-toggle="modal" data-target="#default-Modal">Upload Image</button>
+ 
+ 
         <div class="form-group row">
             <label class="col-sm-2"></label>
             <div class="col-sm-10">
@@ -139,8 +142,43 @@
             </div>
         </div>
       </form>
+ 
+ 
     </div>
   </div>
-
-
+ 
+ 
+ 
+  <div class="modal fade" id="default-Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h4 class="modal-title">Crop and Upload</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <div class="row">
+        <div class="col-md-12 text-center">
+        <div id="upload-demo"></div>
+        </div>
+        <div class="col-md-12" style="padding:3;">
+        <strong>Select image to crop:</strong>
+        <input type="file" id="image">
+        </div>
+      </div>
+      <div class="text-center">
+       <button class="btn btn-primary waves-effect waves-light upload-image"  style="margin-top:2%">Upload Image</button>
+      </div>
+      </div>
+    {{-- <div class="modal-footer">
+    <button type="button" class="btn btn-default waves-effect " >Close</button>
+    <button type="button" class=" ">Save changes</button>
+    </div> --}}
+    </div>
+    </div>
+    </div>
+ 
+ 
 @endsection

@@ -36,4 +36,13 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url('') }}/admin-asset/files/assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="{{ url('') }}/admin-asset/files/assets/css/jquery.mCustomScrollbar.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+
+
 </head>
