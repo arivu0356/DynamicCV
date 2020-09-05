@@ -12,11 +12,16 @@
 <script>
  
 $('#Thecontact').on('submit',function(e){
-    e.preventDefault();
+
+
+  $("#submit").attr("disabled", true); 
+  e.preventDefault();
     var name = $('#name').val();
     var email = $('#email').val();
     var message = $('#message').val();
-     $.ajax({
+     
+    $.ajax({
+
             url:"{{ url('') }}/mail",
             type:"POST",
             data:{
@@ -26,6 +31,8 @@ $('#Thecontact').on('submit',function(e){
             message:message,
           },
           success:function(response){
+
+            
             // console.log(response);
             $("#Thecontact")[0].reset();
           //  $('#themessage').append("<div class='alert alert-success'><h5 style='color:white;margin-bottom: 0px;'//  >Thank you for getting in touch!</h5></div>");
@@ -33,13 +40,14 @@ $('#Thecontact').on('submit',function(e){
                    $('#Thecontact').fadeOut( 0 ) ; 
           $('#divSuccessmail').delay(3000).fadeOut( 0 );            
   $('#Thecontact').delay( 3000 ).fadeIn( 1000 );
-
-                
+  
+  $("#submit").attr("disabled", false);    
           
           
           },
-
+          
          });
+         
 });
  
       $('#CommentPost').on('submit',function(event){ 

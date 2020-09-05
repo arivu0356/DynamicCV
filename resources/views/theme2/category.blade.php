@@ -140,9 +140,12 @@
 
                                     
                                 </div>
-                               <div class="col-sm-12 col-md-6 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                                <div class="col-sm-12 col-md-6 wow fadeInUp col-sm-12 col-md-6 mt-4 " data-wow-duration="0.8s" data-wow-delay="0.2s">
                                     <form method="post" id="Thecontact" action="javascript:void(0);" class="single-form quate-form wow fadeInUp mt-5" >
-                                        <span id="themessage"></span>
+                                        
+                                        
+                                        <span id="themessage"></span>    
+                                        
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <input name="name" class="contact-name form-control" id="name" type="text" placeholder="Your Name" required>
@@ -162,6 +165,10 @@
                                             </div>
                                         </div>
                                     </form>
+                            <div class="mh-about-img shadow-2 wow fadeInUp" id="divSuccessmail" style="display: none;">
+                                    <img class="imgcss" src="{{ url('') }}/uploads/Success.jpg" alt="">
+                                </div>
+                                    
                                 </div>
                                 <div class="col-sm-12 mh-copyright wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                     <div class="row">

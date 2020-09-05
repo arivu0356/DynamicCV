@@ -593,7 +593,7 @@
                                             
                                             <!-- Subject Button -->
                                             <div class="btn-form col-sm-12">
-                                                <button type="submit" class="btn btn-fill btn-block" id="submit">Send Message</button>
+                                                <button type="submit" class="btn btn-fill btn-block" id="submit" >Send Message</button>
                                             </div>
                                         </div>
                                     </form>
