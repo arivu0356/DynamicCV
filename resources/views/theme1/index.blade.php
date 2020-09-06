@@ -56,7 +56,11 @@
                            
                             <ul>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i class="fa fa-envelope"></i><a href="mailto:{{ $personal[0]->email }}">{{ $personal[0]->email }}</a></li>
-                                <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i class="fa fa-phone"></i><a href="callto:{{ $personal[0]->phoneno }}">{{ $personal[0]->phoneno }}</a></li>
+                                <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i class="fa fa-phone"></i><a href="callto:{{ $personal[0]->phoneno }}">{{ $personal[0]->phoneno }}</a>
+                                
+                                
+                                
+                                </li>
                                 <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><i class="fa fa-map-marker"></i><address>{{ $personal[0]->address }}</address></li>
                             </ul>
 
@@ -564,7 +568,8 @@
                                             </div>
                                             <div class="each-info media-body">
                                                 <h3>Phone</h3>
-                                                <a href="callto:{{ $personal[0]->phoneno }}">{{ $personal[0]->phoneno }}</a>
+                                                <a href="callto:{{ $personal[0]->phoneno }}">{{ $personal[0]->phoneno }}</a> <br>
+                                                <a href="callto:{{ $personal[0]->phoneno2 }}">{{ $personal[0]->phoneno2 }}</a>                                            
                                             </div>
                                         </div>
                                 </div>

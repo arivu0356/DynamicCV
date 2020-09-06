@@ -54,6 +54,7 @@ class PersonalController extends Controller
             $name = $request->name;
             $email = $request->email;
             $phoneno = $request->phoneno;
+            $phoneno2 = $request->phoneno2;
             $address = $request->address;
             $role = $request->role;
             $linkedin = $request->linkedin;
@@ -65,6 +66,7 @@ class PersonalController extends Controller
                 'name'=>$name,
                 'email'=>$email,
                 'phoneno'=>$phoneno,
+                'phoneno2'=>$phoneno2,
                 'address'=>$address,
                 'role'=>$role,
                 'linkedin'=>$linkedin,

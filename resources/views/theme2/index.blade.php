@@ -555,6 +555,8 @@
                                             <div class="each-info media-body">
                                                 <h3>Phone</h3>
                                                 <a href="callto:{{ $personal[0]->phoneno }}">{{ $personal[0]->phoneno }}</a>
+                                                <br>
+                                                <a href="callto:{{ $personal[0]->phoneno2 }}">{{ $personal[0]->phoneno2 }}</a>                                            
                                             </div>
                                         </div>
                                 </div>

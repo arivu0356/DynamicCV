@@ -58,6 +58,12 @@
             </div>
         </div>
         <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Alt Contact Number</label>
+            <div class="col-sm-9">
+              <input type="text"  class="form-control"  name="phoneno2" value="{{ $personal[0]->phoneno2 }}"  placeholder="+1(000)-000-0000" required>
+            </div>
+        </div>
+        <div class="form-group row">
             <label class="col-sm-2 col-form-label">Address</label>
             <div class="col-sm-9">
                 <textarea  rows="3" cols="3" class="form-control max-textarea" name="address" placeholder="Your address" >{{ $personal[0]->address }}</textarea>
