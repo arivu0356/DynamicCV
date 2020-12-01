@@ -476,15 +476,17 @@
            BLOG
         ===================
         -->
-        @if($blogcount !== 0)
+
+    @if($blogcount !== 0)        
     <section class="mh-blog" id="mh-blog">
         <div class="container">
-            <div class="row section-separator">
-                <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+            <div class=" section-separator">
+                <div class=" section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <h3>Featured Posts</h3>
                 </div>
+                <div class="mh-single-project-slide-by-side row">
                 @foreach($blog as $bg)
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-12 col-md-12 mh-featured-item">
                     <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                         <img src="{{ url('') }}/{{ $bg->featuredimage }}" alt="" class="img-fluid">
                         <div class="blog-inner">
@@ -492,7 +494,7 @@
                             <div class="mh-blog-post-info">
                                 <ul>
                                     <li><strong>Post On</strong><a>{{ $bg->date }}</a></li>
-                                    <li><strong>By</strong><a href="">{{ $log[0]->name }}</a></li>
+                                    <li><strong>By</strong><a href="">ThemeSpiders</a></li>
                                 </ul>
                             </div>
                             <p>{{ substr(strip_tags($bg->content), 0,  150) }}</p>
@@ -501,6 +503,7 @@
                     </div>
                 </div>
                 @endforeach
+                </div>
             </div>
             @if($blogcount > 3)
             <div class="row">
@@ -512,7 +515,9 @@
             @endif
         </div>
     </section>
+
     @endif
+
 
 
 

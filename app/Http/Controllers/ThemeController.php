@@ -43,7 +43,7 @@ class ThemeController extends Controller
         $this->data['personal'] = DB::table('personal')->where('id','1')->get();
         $this->data['personalimage'] = DB::table('personalimage')->get();
         $this->data['themeapply'] = DB::table('themeapply')->where('id','1')->get();
-        $this->data['blog'] = DB::table('blog')->orderBy('date', 'desc')->take(3)->get();
+        $this->data['blog'] = DB::table('blog')->orderBy('date', 'desc')->take(6)->get();
         $this->data['port'] = DB::table('portfolio')->get();
         $this->data['portcategory'] = DB::table('portfoliocategory')->get();
 

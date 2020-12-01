@@ -274,10 +274,10 @@
             items: 1,
           },
           768: {
-            items: 1,
+            items: 2,
           },
           1170: {
-            items: 1,
+            items: 3,
           }
         }
     });     
